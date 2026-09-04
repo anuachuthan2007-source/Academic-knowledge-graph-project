@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Academic Knowledge Graph</h1>
+                <p>Student Dashboard</p>
+            </div>
+
+            <button onclick="logout()">Logout</button>
+
+        </header>
+
+
+        <main class="content">
+
+            <h2>Welcome, Student 👋</h2>
+
+            <p class="dashboard-text">
+                Your academic knowledge at a glance
+            </p>
+
+
+            <div class="stats">
+
+                <div class="card">
+                    <h3>8</h3>
+                    <p>Subjects</p>
+                </div>
+
+                <div class="card">
+                    <h3>12</h3>
+                    <p>Skills</p>
+                </div>
+
+                <div class="card">
+                    <h3>4</h3>
+                    <p>Projects</p>
+                </div>
+
+                <div class="card">
+                    <h3>6</h3>
+                    <p>Certificates</p>
+                </div>
+
+            </div>
+
+
+            <section class="knowledge-section">
+
+                <h2>My Academic Knowledge</h2>
+
+
+                <div class="knowledge-box">
+
+
+                    <div class="knowledge-item"
+                         onclick="window.location.href='subjects.html'">
+
+                        <span>📚</span>
+
+                        <h3>subjects</h3>
+
+                        <p>View your academic subjects</p>
+
+                    </div>
+
+
+                    <div class="knowledge-item"
+                        onclick="window.location.href='./my-skills.html'">
+                
+                        <span>🛠️</span>
+
+                        <h3>Skills</h3>
+
+                        <p>View your technical skills</p>
+
+                    </div>
+
+
+                    <a href="my-projects.html" style="text-decoration: none; color: inherit;">
+
+    <div class="knowledge-item">
+
+        <span>💻</span>
+        <h3>Projects</h3>
+        <p>Explore your projects</p>
+
+    </div>
+
+</a>
+               <a href="certificates.html" style="text-decoration: none; color: inherit;">
+
+    <div class="knowledge-item">
+
+        <span>🏆</span>
+        <h3>Certificates</h3>
+        <p>View your achievements</p>
+
+    </div>
+
+</a>
+
+                </div>
+
+            </section>
+            <section class="graph-section">
+
+    <h2>Knowledge Graph</h2>
+    <a href="knowledge-graph.html">
+    <button>View Full Knowledge Graph</button>
+</a>
+
+    <div class="graph-placeholder">
+
+        <div class="node student">
+            Student
+        </div>
+
+        <div class="line"></div>
+
+        <div class="node">
+            Subjects
+        </div>
+
+        <div class="line"></div>
+
+        <div class="node">
+            Skills
+        </div>
+
+        <div class="line"></div>
+
+        <div class="node">
+            Projects
+        </div>
+
+        <div class="line"></div>
+
+        <div class="node">
+            Certificates
+        </div>
+
+    </div>
+
+</section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
