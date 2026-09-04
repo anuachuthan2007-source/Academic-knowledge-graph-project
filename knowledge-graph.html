@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Knowledge Graph</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .graph-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .graph-node {
+            display: inline-block;
+            padding: 15px 20px;
+            margin: 8px;
+            border-radius: 12px;
+            background: #e8f0fe;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .connection {
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        .graph-node:hover {
+            transform: scale(1.05);
+        }
+
+        .graph-info {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Academic Knowledge Graph</h1>
+                <p>Knowledge Map</p>
+            </div>
+
+            <button onclick="window.location.href='dashboard.html'">
+                Dashboard
+            </button>
+
+        </header>
+
+
+        <main class="content">
+
+            <h2>🧠 My Knowledge Graph</h2>
+
+            <p class="dashboard-text">
+                Explore the connection between your academic knowledge,
+                skills and achievements.
+            </p>
+
+
+            <div class="graph-container">
+
+                <div
+                    class="graph-node"
+                    onclick="showInfo('Student')">
+                    👨‍🎓 Student
+                </div>
+
+                <div class="connection">↓</div>
+
+
+                <div
+                    class="graph-node"
+                    onclick="showInfo('Subjects')">
+                    📚 Subjects
+                </div>
+
+                <div class="connection">↓</div>
+
+
+                <div
+                    class="graph-node"
+                    onclick="showInfo('Skills')">
+                    🛠️ Skills
+                </div>
+
+                <div class="connection">↓</div>
+
+
+                <div
+                    class="graph-node"
+                    onclick="showInfo('Projects')">
+                    💻 Projects
+                </div>
+
+                <div class="connection">↓</div>
+
+
+                <div
+                    class="graph-node"
+                    onclick="showInfo('Certificates')">
+                    🏆 Certificates
+                </div>
+
+
+                <div class="graph-info">
+
+                    <h3 id="infoTitle">
+                        Click a node
+                    </h3>
+
+                    <p id="infoText">
+                        Select any node to view information.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script>
+
+        function showInfo(type) {
+
+            const title =
+                document.getElementById("infoTitle");
+
+            const text =
+                document.getElementById("infoText");
+
+
+            if (type === "Student") {
+
+                title.textContent = "👨‍🎓 Student";
+
+                text.textContent =
+                    "The student is the central entity of the academic knowledge graph.";
+
+            }
+
+            else if (type === "Subjects") {
+
+                title.textContent = "📚 Subjects";
+
+                text.textContent =
+                    "Subjects represent the academic areas studied by the student.";
+
+            }
+
+            else if (type === "Skills") {
+
+                title.textContent = "🛠️ Skills";
+
+                text.textContent =
+                    "Skills are developed through subjects, practice and projects.";
+
+            }
+
+            else if (type === "Projects") {
+
+                title.textContent = "💻 Projects";
+
+                text.textContent =
+                    "Projects demonstrate how the student applies learned skills.";
+
+            }
+
+            else if (type === "Certificates") {
+
+                title.textContent = "🏆 Certificates";
+
+                text.textContent =
+                    "Certificates represent completed courses and achievements.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
